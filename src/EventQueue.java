@@ -27,7 +27,7 @@ public class EventQueue extends PriorityQueue<Event> {
             case ARRIVAL -> handleArrival(sim, ready, current);
             case DEPARTURE -> handleDeparture(sim, current);
             case EXPIRATION -> handleExpiration(sim, ready, current);
-        };
+        }
         return current.getEventTime();
     }
 

@@ -1,6 +1,4 @@
 import java.util.ArrayDeque;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class Simulator {
     //Private attributes
@@ -43,12 +41,9 @@ public class Simulator {
         this.makeNew = true;
     }
     //Getters
-    public double getClock() {return this.clock;}
     public int getCompletions() {return this.completions;}
-    public int getGenerations() {return this.generations;}
     public boolean isCPUBusy() {return this.CPUBusy;}
     public ArrayDeque<Process> getReadyQueue() {return this.readyQueue;}
-    public boolean isMakeNew() {return this.makeNew;}
     public double getAvgTurnaroundTime() {return this.avgTurnaroundTime;}
     public double getAvgSwitches() {return this.avgSwitches;}
     public double getAvgQueueSize() {return this.avgQueueSize;}
@@ -56,8 +51,6 @@ public class Simulator {
 
 
     //Setters
-    public void setClock(double clock) {this.clock = clock;}
-    public void setGenerations(int generations) {this.generations = generations;}
     public void setCompletions(int completions) {this.completions = completions;}
     public void setCPUBusy(boolean flag) {this.CPUBusy = flag;}
     public void setMakeNew(boolean flag) {this.makeNew = flag;}
@@ -78,8 +71,6 @@ public class Simulator {
         //Logging section
         System.out.println("Current clock: " + clock);
         System.out.println("Current completions: " + completions);
-        //System.out.println("Event queue size: " + events.size());
-        //System.out.println("Ready queue size: " + readyQueue.size());
         System.out.println();
     }
 

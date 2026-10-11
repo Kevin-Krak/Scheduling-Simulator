@@ -1,13 +1,10 @@
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 public class Event implements Comparable<Event> {
     //Define event types
     public enum EventType {ARRIVAL, DEPARTURE, EXPIRATION}
 
     //Private attributes
-    private EventType type;
-    private Double eventTime;
+    private final EventType type;
+    private final Double eventTime;
     private Process proc;
 
     //Default constructor
